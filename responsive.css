@@ -1,0 +1,79 @@
+/* Responsive CSS */
+
+/* Ẩn 1 cột sản phẩm khi dưới 1200px */
+@media (max-width: 1199.98px) {
+  .product-list {
+    --column: 2;
+  }
+}
+.product-item {
+  align-items: normal;
+}
+
+.footer-item-first,
+.footer-item-last {
+  flex: 1 0 17rem;
+}
+/* Ẩn Sidebar khi dưới 998px */
+@media (max-width: 998.98px) {
+  .action-btn {
+    font-size: 1.3rem;
+  }
+  .action-wrapper {
+    font-size: 1.3rem;
+  }
+  .footer-item {
+    flex: 0 0 10rem;
+  }
+  .nav a {
+    padding: 10px;
+    font-size: 1.3rem;
+  }
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    width: 100%; /* Chiếm hết không gian khi sidebar ẩn đi */
+  }
+}
+
+/* Chỉ còn 1 cột sản phẩm khi dưới 768px (mobile) */
+@media (max-width: 768.98px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .product-list {
+    --column: 1;
+  }
+
+  .product-item {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .product-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .nav {
+    display: none; /* tạm thời ẩn menu chính */
+  }
+
+  .action-wrapper {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header-content {
+    padding: 20px 0;
+  }
+}

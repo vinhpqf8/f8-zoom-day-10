@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .search-box {
+      position: relative;
+      display: flex;
+      background: white;
+      border: 4px solid white;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      max-width: 350px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      translate: 0 -301%;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+    }
+
+    .search-box button {
+      background: #a0144a; /* màu hồng đậm */
+      color: white;
+      border: none;
+      padding: 0 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    label {
+      font-size: 32px;
+    }
+
+    #drawer-input:checked ~ .search-box {
+      translate: 0 0;
+    }
+  </style>
+  <body>
+    <label for="drawer-input">🔍</label>
+    <input type="checkbox" id="drawer-input" checked />
+    <div class="search-box">
+      <input id="search-head" type="text" placeholder="Search..." />
+      <button type="submit">🔍</button>
+    </div>
+  </body>
+</html>
